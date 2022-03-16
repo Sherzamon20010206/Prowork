@@ -27,6 +27,7 @@ def Search(request):
 
         print(data['search'])
 
+
         if data['search']=="pustoy":
             data_file = []
             for file in files:

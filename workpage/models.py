@@ -17,7 +17,7 @@ class Document(models.Model):
     title=models.TextField(null=True,blank=True)
     file = models.FileField(upload_to="DocFile")
     img=models.ImageField(upload_to="document")
-    sort=models.ForeignKey(Sort,on_delete=models.CASCADE,null=True,blank=True)
+
     tag=models.TextField(null=True,blank=True)
     data=models.TimeField(auto_now_add=True,null=True,blank=True)
 

@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
+
 {% load static %}
 <head>
+  <meta name="yandex-verification" content="482621f6265a25a1" />
   <meta charset="UTF-8">
+    <meta name="yandex-verification" content="4fb20b9aa1a3341a" />
+     <meta property="og:site_name" content="FileStore.uz" />
+    <meta name="rights" content="«FileStore.uz»" />
+    <meta property="og:url" content="https://filestore.uz/" />
+     <meta property="og:type" content="website" />
+    <meta property="og:locale:alternate" content="uz_UZ" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta   name="description" content="Рефераты, слайды, разработки уроков, IELTS всё в одном AIM.UZ
+    Referatlar, Dars ishlanmalar, Testlar, Taqdimotlar, Tadbir va bayram senariylari. Barchasi birda" />
+  <meta name="keywords" content="Referatlar, arxiv, referatuz, o'zbekcha, referat, haqida, doc, docx, ppt, pdf, dars ishlanmalar, ssenariylar" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
+  <meta name="copyright" content="Muhiddinov Sherzamon, http://sherzamon.online">
 
-  <title>Virtual Folio - Portfolio HTML5 Template</title>
+  <title>FileStore.uz</title>
 
-  <link rel="shortcut icon" type="image/x-icon" href="{% static  "assets/favicon.ico" %}">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static  "assets/favicon2.webp" %}">
 
   <link rel="stylesheet" type="text/css" href="{% static  "assets/css/themify-icons.css" %}">
 
@@ -94,9 +104,8 @@
 
   <div class="topbar-nav fixed-top">
     <div class="brand">
-      <img src="{% static  "assets/favicon.ico" %}" alt="" width="30" height="30">
-    </div>
-    <h3 class="ml-1">Gram</h3>
+      </div>
+    <h3 class="ml-1"><a href="{% url "homepage" %}">FileStore</a></h3>
     <button class="btn-fab toggle-menu mr-3"><span class="ti-menu"></span></button>
   </div>
 
@@ -166,14 +175,14 @@
 
     <!-- Footer -->
     <div class="vg-footer">
-      <h1 class="text-center">Virtual Folio</h1>
+      <h1 class="text-center">FileStore</h1>
       <div class="container">
         <div class="row">
           <div class="col-lg-4 py-3">
             <div class="footer-info">
-              <p>Where to find me</p>
+              <p></p>
               <hr class="divider">
-              <p class="fs-large fg-white">1600 Amphitheatre Parkway Mountain View, California 94043 US</p>
+              <p >Savol va takliflar uchun <a href="https://t.me/Filestore_set_bot">Telegram link</a></p>
             </div>
           </div>
           <div class="col-md-6 col-lg-3 py-3">
@@ -193,28 +202,27 @@
               <p>Contact me</p>
               <hr class="divider">
               <ul class="list-unstyled">
-                <li>info@virtual.com</li>
-                <li>+8890234</li>
-                <li>+813023</li>
+                <li><a href="mailto:Filestoreuz@gmail.com">Email</a></li>
+                <li></li>
+                <li></li>
               </ul>
             </div>
           </div>
         </div>
         <div class="row justify-content-center mt-3">
           <div class="col-12 mb-3">
-            <h3 class="fw-normal text-center">Subscribe</h3>
+            <h3 class="fw-normal text-center">Sayt haqida fikr qoldirish</h3>
           </div>
           <div class="col-lg-6">
             <form class="mb-3">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Email address">
-                <input type="submit" class="btn btn-theme no-shadow" value="Subscribe">
+                <input type="text" class="form-control" placeholder="izoh qoldiring ...">
+                <input type="submit" class="btn btn-theme no-shadow" value="Yuborish">
               </div>
             </form>
           </div>
           <div class="col-12">
-            <p class="text-center mb-0 mt-4">Copyright &copy;2020. All right reserved | This template is made with <span class="ti-heart fg-theme-red"></span> by <a href="https://www.macodeid.com/">MACode ID</a></p>
-          </div>
+            </div>
         </div>
       </div>
     </div> <!-- End footer -->
@@ -244,8 +252,7 @@
   <script src="{% static    "assets/js/google-maps.js"  %}"></script>
 
   <script src="{% static    "assets/js/minibar-virtual.js"  %}"></script>
-
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIA_zqjFMsJM_sxP9-6Pde5vVCTyJmUHM&callback=initMap"></script>
+  <script src="{% static    "js/fikr.js"  %}"></script>
 
 </body>
 </html>

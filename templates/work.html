@@ -16,15 +16,15 @@
             <div class="d-flex py-2 mx-n2">
               <div class="input-group px-2">
 
-              </div>
-              <div class="input-group px-2">
-                <select class="vg-select">
-                  <option value="">Sort</option>
-                    {% for sort in  sorts  %}
-                  <option value="cat-1">{{ sort.sort }}</option>
-                    {% endfor %}
-                </select>
-              </div>
+              </div><div class="input-group px-2"><h1 ><a style="color:#e73232" href="{% url "homepage" %}">FileStore</a>  </h1></div>
+{#              <div class="input-group px-2">#}
+{#                <select onselect="search()"id="sort1" class="vg-select">#}
+{##}
+{#                    {% for sort in  sorts  %}#}
+{#                    <option  id="sort"  value="{{ sort.sort }}">{{ sort.sort }}</option>#}
+{#                    {% endfor %}#}
+{#                </select>#}
+{#              </div>#}
             </div>
           </div>
         </div>
@@ -68,25 +68,25 @@
                 {% endfor %}
         </div> <!-- End gridder -->
         {% endif %}
-          <div class="col-12 py-3">
-            <ul class="pagination justify-content-center">
-              <li class="page-item">
-                <a href="" class="page-link">Prev</a>
-              </li>
-              <li class="page-item active">
-                <a href="" class="page-link">1</a>
-              </li>
-              <li class="page-item">
-                <a href="" class="page-link">2</a>
-              </li>
-              <li class="page-item">
-                <a href="" class="page-link">3</a>
-              </li>
-              <li class="page-item">
-                <a href="" class="page-link">Next</a>
-              </li>
-            </ul>
-          </div>
+{#          <div class="col-12 py-3">#}
+{#            <ul class="pagination justify-content-center">#}
+{#              <li class="page-item">#}
+{#                <a href="" class="page-link">Prev</a>#}
+{#              </li>#}
+{#              <li class="page-item active">#}
+{#                <a href="" class="page-link">1</a>#}
+{#              </li>#}
+{#              <li class="page-item">#}
+{#                <a href="" class="page-link">2</a>#}
+{#              </li>#}
+{#              <li class="page-item">#}
+{#                <a href="" class="page-link">3</a>#}
+{#              </li>#}
+{#              <li class="page-item">#}
+{#                <a href="" class="page-link">Next</a>#}
+{#              </li>#}
+{#            </ul>#}
+{#          </div>#}
         </div>
       </div>
     </div>

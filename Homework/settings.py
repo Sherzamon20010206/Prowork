@@ -129,7 +129,7 @@ STATICFILES_DIRS=[str(BASE_DIR.joinpath('static'))]
 
 STATIC_ROOT =str(BASE_DIR.joinpath('staticfiles'))
 STATICFILES_STORAGE='django.contrib.staticfiles.storage.StaticFilesStorage'
-TOKEN="5172721675:AAE4tSn0sxrN4Jx7Lr2Pyv6GHSsUglDIEv8"
+TOKEN="5188059334:AAGdqw8qfUggn6ZpMUjNeaRtWMF5cTttIcY"
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOGIN_REDIRECT_URL = 'homepage'

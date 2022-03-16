@@ -2,10 +2,10 @@ from django.core.management.base import BaseCommand
 from telegram.utils.request import Request
 from telegram import Bot
 from django.conf import settings
-from telegram import Update, ReplyKeyboardRemove
+from telegram import Update, ReplyKeyboardRemove,ReplyKeyboardMarkup
 from telegram.ext import Updater, CommandHandler, CallbackContext, ConversationHandler, MessageHandler, Filters,\
     CallbackQueryHandler
-
+from django.contrib.auth.models import User
 from bot.views import *
 
 import random
@@ -45,8 +45,10 @@ def kod(update,context):
     update.message.reply_text(f"sizning kodingiz")
     update.message.reply_text(f"login : {login}")
     update.message.reply_text(f"password : {password}")
-    user = User.objects.create_user(login, 'email', password)
+    user = User.objects.create_user(username=login,email='email',password=password)
     user.save()
+
+
 
 
 
@@ -93,8 +95,7 @@ class Command(BaseCommand):
 
         )
         updater.dispatcher.add_handler(conv_hand)
-        updater.dispatcher.add_handler(MessageHandler(Filters.status_update.new_chat_members,onjoin))
-        updater.dispatcher.add_handler(MessageHandler(Filters.status_update.left_chat_member,onleft))
+
 
         updater.start_polling()
         updater.idle()

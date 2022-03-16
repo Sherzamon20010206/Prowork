@@ -4,10 +4,11 @@
   <div class="vg-main-wrapper">
     <div class="vg-page page-home" id="home" style="background-image: url({% static "assets/img/bg_image_2.jpg" %});opacity: inherit">
       <div class="caption wow zoomInUp">
-        <h1 style="color: red" class="fw-normal"><b>ProWork saytiga </b></h1>
+        <h2 style="color: red" class="fw-normal"><b>FileStore saytiga </b></h2>
           <h2 class="fw-medium fg-theme">Xush kelibsiz!</h2>
 
-        <p class="tagline">Kitoblar/Darsliklar/Slaydlar/Refaratlar</p>
+        <p class="tagline">Kitoblar/Slaydlar/Refaratlar</p>
+
       </div>
     </div>
     <!-- Page About -->
@@ -23,8 +24,8 @@
               <div class="iconic">
                 <span class="ti-layout"></span>
               </div>
-              <h4 class="fg-theme">Web Design</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+              <h4 class="fg-theme">Web Dasturchilar uchun</h4>
+              <p>Web dasturlash kurslari,foydali qo'llanmalar va real proyektlar ,ularning tuzilmalari</p>
               <a href="#" class="btn btn-theme btn-rounded">Read More</a>
             </div>
           </div>
@@ -33,9 +34,9 @@
               <div class="iconic">
                 <span class="ti-announcement"></span>
               </div>
-              <h4 class="fg-theme">SEO</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-              <a href="#" class="btn btn-theme btn-rounded">Read More</a>
+              <h4 class="fg-theme">Kitoblar</h4>
+              <p>Elektron kitoblar,rus,ingliz va o'zbek tilida</p>
+              <a href="{% url "book" %}" class="btn btn-theme btn-rounded">Read More</a>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 wow fadeInUp">
@@ -43,41 +44,12 @@
               <div class="iconic">
                 <span class="ti-desktop"></span>
               </div>
-              <h4 class="fg-theme">Web Development</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-              <a href="#" class="btn btn-theme btn-rounded">Read More</a>
+              <h4 class="fg-theme">Fayllar</h4>
+              <p>o'zingizga kerakli bo'lgan xujjatlar,slaydlar,referatlar,kitob va darslilar elektron xujjatlar,PDF va barcha turdagi fayllar katalogi</p>
+              <a href="{% url "workpage" %}" class="btn btn-theme btn-rounded">Read More</a>
             </div>
           </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card card-body">
-              <div class="iconic">
-                <span class="ti-layout"></span>
-              </div>
-              <h4 class="fg-theme">Web Design</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-              <a href="#" class="btn btn-theme btn-rounded">Read More</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card card-body">
-              <div class="iconic">
-                <span class="ti-announcement"></span>
-              </div>
-              <h4 class="fg-theme">SEO</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-              <a href="#" class="btn btn-theme btn-rounded">Read More</a>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 wow fadeInUp">
-            <div class="card card-body">
-              <div class="iconic">
-                <span class="ti-desktop"></span>
-              </div>
-              <h4 class="fg-theme">Web Development</h4>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
-              <a href="#" class="btn btn-theme btn-rounded">Read More</a>
-            </div>
-          </div>
+
         </div>
       </div>
     </div> <!-- End page services -->
@@ -86,26 +58,13 @@
     <div class="vg-page p-0" id="testimonial">
       <div class="owl-carousel testi-carousel" style="background-image:url({% static "assets/img/bg_image_2.jpg" %})">
         <div class="item">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, dicta atque. Voluptas illum quasi asperiores autem unde cupiditate temporibus quisquam iste rem dignissimos. Commodi placeat, quis omnis inventore asperiores sit.</p>
-          <span class="iconic">
-            <span class="ti-quote-left"></span>
-          </span>
-          <h4>Andrew Johanson</h4>
+            <p>Saytda ro'yxattan o'ting va fayllarni yuklab oling.Saytda barcha turdagi elektron xujjatlarni osongina topishingiz mumkin</p>
+          <span class="iconic"> <img src="{% static "assets/favico.jpg" %}" alt=""></span>
+
+          <h4>File Store</h4>
         </div>
-        <div class="item">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, dicta atque. Voluptas illum quasi asperiores autem unde cupiditate temporibus quisquam iste rem dignissimos. Commodi placeat, quis omnis inventore asperiores sit.</p>
-          <span class="iconic">
-            <span class="ti-quote-left"></span>
-          </span>
-          <h4>Louis Herreira</h4>
-        </div>
-        <div class="item">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, dicta atque. Voluptas illum quasi asperiores autem unde cupiditate temporibus quisquam iste rem dignissimos. Commodi placeat, quis omnis inventore asperiores sit.</p>
-          <span class="iconic">
-            <span class="ti-quote-left"></span>
-          </span>
-          <h4>Patrice Clark</h4>
-        </div>
+
+
       </div>
     </div> <!-- End testimonial -->
 

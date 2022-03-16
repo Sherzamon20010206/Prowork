@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uz">
 {% load static %}
 <head>
+  <meta name="yandex-verification" content="482621f6265a25a1" />
   <meta charset="UTF-8">
+    <meta name="yandex-verification" content="4fb20b9aa1a3341a" />
+     <meta property="og:site_name" content="FileStore.uz" />
+    <meta name="rights" content="«FileStore.uz»" />
+    <meta property="og:url" content="https://filestore.uz/" />
+     <meta property="og:type" content="website" />
+    <meta property="og:locale:alternate" content="uz_UZ" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+  <meta   name="description" content="Рефераты, слайды, разработки уроков, IELTS всё в одном AIM.UZ
+    Referatlar, Dars ishlanmalar, Testlar, Taqdimotlar, Tadbir va bayram senariylari. Barchasi birda" />
+  <meta name="keywords" content="Referatlar, arxiv, referatuz, o'zbekcha, referat, haqida, doc, docx, ppt, pdf, dars ishlanmalar, ssenariylar" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <meta name="copyright" content="MACode ID, https://www.macodeid.com/">
+  <meta name="copyright" content="Muhiddinov Sherzamon, http://sherzamon.online">
 
-  <title>Virtual Folio - Portfolio HTML5 Template</title>
+  <title>FileStore.uz</title>
 
-  <link rel="shortcut icon" type="image/x-icon" href="{% static  "assets/favicon.ico" %}">
+  <link rel="shortcut icon" type="image/x-icon" href="{% static  "assets/favicon2.webp" %}">
 
   <link rel="stylesheet" type="text/css" href="{% static  "assets/css/themify-icons.css" %}">
 
@@ -154,15 +163,21 @@
     </div>
   </div>
  <div class="vg-page page-contact" id="contact">
-      <h1 class="text-center fg-dark wow fadeInUp">Contact</h1>
+
       <div class="container-fluid">
 
           {% if user.is_authenticated %}
               <div >
               <div class="vg-contact-form">
-                  <h1>salom         {{ user }} <a href="{% url "logout"  %}">Logout</a>  </h1></div></div>
+                  <h1 style="color: #dc2727">Assalomu aleykum! <br>  sizning loginingiz : {{ user }}  <br><button  class="btn btn-theme mt-3 wow fadeInUp ml-1"><a href="{% url "logout"  %}">Logout</a></button> </h1>
+              </div>
+
+
+
                 {% else %}
                <div >
+
+               <h1 class="text-center fg-dark wow fadeInUp">Login</h1>
             <div class="vg-contact-form">
 
               <div class="form-row" id="ok"><b><h2 style="color:red" id="ok1"></h2></b>
@@ -176,12 +191,15 @@
 
 
                 <button onclick="sherzamon()"  class="btn btn-theme mt-3 wow fadeInUp ml-1">Login</button>
-              </div>
+              </div><div class="col-12 wow fadeInUp">
+                  <p><br>Agar siz saytda yangi bo'lsangiz quyidagi <a href="https://t.me/FileStore_set_bot">TELEGRAM LINK </a>  orqali oz login va parolingizga ega bo'ling</p>
+                </div>
             </div>
+
           </div>
 {% endif %}
 
-        </div>
+
       </div>
     </div> <!-- End page contact -->
 

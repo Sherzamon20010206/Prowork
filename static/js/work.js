@@ -1,5 +1,6 @@
 function search() {
     search_word = document.getElementById(`search`).value
+
     console.log(search_word)
     if (search_word != "") {
 
@@ -12,7 +13,8 @@ function search() {
                 'X-CSRFToken': csrftoken,
             },
             body: JSON.stringify({
-                'search':search_word
+                'search':search_word,
+                'sort':sort
             })
         })
             .then((response) => {
