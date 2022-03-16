@@ -31,8 +31,26 @@
 
   <link rel="stylesheet" type="text/css" href="{% static  "assets/css/minibar.virtual.css" %}">
 </head>
-<body class="theme-red">
+<body class="theme-red" id="content">
+<script>
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
 
+    const csrftoken = getCookie('csrftoken');
+</script>
   <!-- Back to top button -->
   <div class="btn-back_to_top">
     <span class="ti-arrow-up"></span>
@@ -96,12 +114,21 @@
             <span class="caption">Home</span>
           </a>
         </li>
+            {% if user.is_authenticated %}
+        <li class="menu-item">
+          <a href="{% url "login" %}" class="menu-link">
+            <span class="icon ti-user"></span>
+            <span class="caption">Logout</span>
+          </a>
+        </li>
+            {% else %}
         <li class="menu-item">
           <a href="{% url "login" %}" class="menu-link">
             <span class="icon ti-user"></span>
             <span class="caption">Login</span>
           </a>
         </li>
+            {% endif %}
         <li class="menu-item">
           <a href="{% url "workpage" %}" class="menu-link">
             <span class="icon ti-file"></span>
@@ -129,30 +156,31 @@
  <div class="vg-page page-contact" id="contact">
       <h1 class="text-center fg-dark wow fadeInUp">Contact</h1>
       <div class="container-fluid">
-        <div class="row py-5">
-          <div class="col-lg-7 wow zoomIn">
-            <div class="vg-maps">
-              <div id="text" style="width: 10%; height: 10%;">
-                  <img src="{%  static   "assets/img/person.jpg" %}" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <form class="vg-contact-form">
-              <div class="form-row">
+
+          {% if user.is_authenticated %}
+              <div >
+              <div class="vg-contact-form">
+                  <h1>salom         {{ user }} <a href="{% url "logout"  %}">Logout</a>  </h1></div></div>
+                {% else %}
+               <div >
+            <div class="vg-contact-form">
+
+              <div class="form-row" id="ok"><b><h2 style="color:red" id="ok1"></h2></b>
                 <div class="col-12 wow fadeInUp">
-                  <input class="form-control" type="text"  name="Login" placeholder="Login ">
+                  <input  id="login"  class="form-control" type="text"  name="Login" placeholder="Login ">
                 </div>
                 <div class="col-6 wow fadeInUp">
-                  <input class="form-control" id="myInput" type="password" value="password" name="password" placeholder="password"></div>
+                  <input class="form-control"   type="password"  id="myInput"  ></div>
                   <input type="checkbox" style="margin:auto"  onclick="myFunction()"><p style="margin: auto">show password</p>
 
 
 
-                <button type="submit" class="btn btn-theme mt-3 wow fadeInUp ml-1">Login</button>
+                <button onclick="sherzamon()"  class="btn btn-theme mt-3 wow fadeInUp ml-1">Login</button>
               </div>
-            </form>
+            </div>
           </div>
+{% endif %}
+
         </div>
       </div>
     </div> <!-- End page contact -->
@@ -182,7 +210,7 @@
   <script src="{% static    "assets/vendor/animateNumber/jquery.animateNumber.min.js"  %}"></script>
 
   <script src="{% static     "assets/vendor/waypoints/jquery.waypoints.min.js" %}"></script>
-  <script src="{% static     "assets/js/password.js" %}"></script>
+  <script src="{% static     "password.js" %}"></script>
 
 
 

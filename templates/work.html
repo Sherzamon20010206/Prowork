@@ -9,7 +9,7 @@
         <div class="row widget-grid">
           <div class="col-lg-8">
             <div class="input-group py-2">
-              <input type="text" class="form-control" placeholder="Search">
+              <input id="search"  oninput="search()" type="text" class="form-control" placeholder="Search">
             </div>
           </div>
           <div class="col-lg-4">
@@ -29,13 +29,16 @@
           </div>
         </div>
         <div class="">
-  <div class="gridder my-3">
+        {% if user.is_authenticated %}
+  <div class="gridder my-3" id="javob">
+
             {% for work in works %}
-          <div class="grid-item apps wow zoomIn">
-            <div class="img-place" data-src="{{work.img.url}}" data-fancybox data-caption="<h5 class='fg-theme'></h5> <p>{{ work.title }}</p>">
+          <div class="grid-item apps ios wow zoomIn">
+            <div class="img-place" data-src="{{work.img.url}}" data-fancybox data-caption="<h5 class='fg-theme'>{{ work.title }}</h5> <p>ProWork</p>">
               <img src="{{work.img.url}}" alt="">
               <div class="img-caption">
                 <h5 class="fg-theme">{{ work.title |slice:"20" }}</h5>
+                  <p>ProWork</p>
 
 
               </div>
@@ -44,6 +47,27 @@
           </div>
                 {% endfor %}
         </div> <!-- End gridder -->
+
+
+        {% else %}
+            <div class="gridder my-3" id="javob">
+
+            {% for work in works %}
+          <div class="grid-item apps ios wow zoomIn">
+            <div class="img-place" data-src="{{work.img.url}}" data-fancybox data-caption="<h5 class='fg-theme'>{{ work.title }}</h5> <p>ProWork</p>">
+              <img src="{{work.img.url}}" alt="">
+              <div class="img-caption">
+                <h5 class="fg-theme">{{ work.title |slice:"20" }}</h5>
+                  <p>ProWork</p>
+
+
+              </div>
+            </div>
+
+          </div>
+                {% endfor %}
+        </div> <!-- End gridder -->
+        {% endif %}
           <div class="col-12 py-3">
             <ul class="pagination justify-content-center">
               <li class="page-item">
@@ -68,5 +92,5 @@
     </div>
 
   </div>
-
+    <script src="{% static "js/work.js" %}"></script>
  {% endblock %}

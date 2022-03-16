@@ -572,7 +572,7 @@ pre code {
 }
 
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
-  width: 100%;
+  width: auto;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -5019,7 +5019,7 @@ input[type="button"].btn-block {
 }
 
 .pagination {
-  display: -ms-flexbox;
+
   display: flex;
   padding-left: 0;
   list-style: none;
